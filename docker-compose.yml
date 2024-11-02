@@ -1,0 +1,25 @@
+
+services:
+  keeweb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: keeweb
+    hostname: keeweb
+    environment:
+      - HT_USER=usuario
+      - HT_PASSWORD=password
+      - IP_WEBDAV=localhost
+      - SSL_DOMAIN=localhost
+    volumes:
+      - ./webdav/data:/var/www/webdav
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - keeweb_network
+    restart: unless-stopped
+
+networks:
+  keeweb_network:
+    driver: bridge
