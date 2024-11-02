@@ -23,7 +23,8 @@ docker compose build
 ## Creating the containers
 
 You have to edit the file named “docker_compose.yml” by setting the following variables:
-      - HT_USER --> WEBDAV USER
-      - HT_PASSWORD --> WEBDAV PASSWORD
-      - IP_WEBDAV --> WEBDAV IP (External)
-      - SSL_DOMAIN --> Domain to set up the self-signed certificate
+
+- HT_USER: WEBDAV USER
+- HT_PASSWORD: WEBDAV PASSWORD
+- IP_WEBDAV: WEBDAV IP (External)
+- SSL_DOMAIN: Domain to set up the self-signed certificate
