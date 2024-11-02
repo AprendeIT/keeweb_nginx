@@ -2,7 +2,7 @@
 
 ## build the image without docker compose:
 
-1. Enter to the git repo directory and execute:
+Enter to the git repo directory and execute:
 ```docker build -t "keeweb_nginx:latest" .```
 
 Or Execute:
