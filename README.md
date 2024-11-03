@@ -22,8 +22,10 @@ PRODUCTION_EXTERNAL=1
 ## BUILD the image
 You have to execute the following commands:
 
+<pre>
 cd keeweb_nginx
 docker compose build
+</pre>
 
 ## Creating the containers
 
