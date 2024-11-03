@@ -11,6 +11,7 @@ services:
       - HT_PASSWORD=password
       - IP_WEBDAV=localhost
       - SSL_DOMAIN=localhost
+      - PRODUCTION_EXTERNAL=1
     volumes:
       - ./webdav/data:/var/www/webdav
     ports:

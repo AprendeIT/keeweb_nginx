@@ -6,10 +6,13 @@ then
    exit
 fi
 
-mkdir /var/www/webdav/webdav
-chown www-data:www-data -R /var/www/webdav/webdav
+if [ "${PRODUCTION_EXTERNAL}" = "1" ]; then
+   echo "I can't create default_config.json because PRODUCTION_EXTERNAL is set to 1 (Don't you worry that's not a problem)"
+else
+   mkdir /var/www/webdav/webdav
+   chown www-data:www-data -R /var/www/webdav/webdav
 
-cat > /var/www/keeweb/default_config.json <<EOF
+   cat > /var/www/keeweb/default_config.json <<EOF
 {
 	"settings": {
 		"theme": "fb",
@@ -66,7 +69,7 @@ cat > /var/www/keeweb/default_config.json <<EOF
 	]
 }
 EOF
-
+fi
 
 #IF CERT VAR OR CERT FILE DONT EXISTS
 if [ ! -z "$SSL_DOMAIN" ] && [ ! -f /etc/nginx/external/cert.pem ]
