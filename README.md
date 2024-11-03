@@ -1,4 +1,4 @@
-# HOW TO without Docket compose
+# HOW TO without Docker compose
 
 ## build the image without docker compose:
 
